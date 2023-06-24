@@ -5,13 +5,19 @@ const clearButton = document.querySelector('.clear');
 const rgbButton = document.querySelector('.rgb');
 let sizeSlider = document.querySelector('.slider');
 let inputSlider = document.querySelector('#slider-container .input');
+let colorPicker = document.querySelector('.colorPicker');
 let currentMode = '';
 const DEFAULT_COLOR = '#333333';
 let currentColor = DEFAULT_COLOR;
 
+colorPicker.oninput = () => {
+  setNewColor(colorPicker.value);
+};
+
 function setNewColor(newColor) {
   currentColor = newColor;
 }
+
 function setupBoard(size) {
   board.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
   board.style.gridTemplateRows = `repeat(${size}, 1fr)`;
