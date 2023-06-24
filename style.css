@@ -7,19 +7,28 @@
 html {
   height: 100%;
 }
+
+main {
+  height: 100%;
+}
 body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: floralwhite;
+}
+
+.title {
+  font-size: 50px;
 }
 
 #board {
   box-shadow: rgb(0, 0, 1, 0.9) 0px 3px 8px;
-  min-width: 380px;
+  min-width: 600px;
   min-height: 450px;
-  margin: 20px 0;
+  margin: 0px 0px 20px 0px;
 }
 
 #container {
@@ -27,12 +36,93 @@ body {
   padding: 20px;
 }
 
-#lower-button {
+#upper-button {
+  width: 600px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 0 20px 20px 20px;
 }
 
 .buttons {
+  border-radius: 20px;
   width: 100px;
-  height: 30px;
+  flex-grow: 1;
+  height: 40px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.slider {
+  margin: 20px;
+}
+
+#slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#board {
+  display: grid;
+}
+
+.colorPicker {
+  border: none;
+  width: 50px;
+  height: 50px;
+}
+
+.current-color {
+  width: 100px;
+  height: 40px;
+  border: 1px solid black;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.active {
+  background-color: mediumslateblue;
+}
+
+.buttons,
+.grid-elements {
+  user-select: none;
+}
+
+.buttons:hover {
+  border-radius: 20px;
+  background-color: gainsboro;
+}
+
+.para {
+  text-align: center;
+  margin: 10px;
+  font-size: large;
+}
+
+@media (max-width: 500px) {
+  .title {
+    font-size: xx-large;
+  }
+  #board {
+    box-shadow: rgb(0, 0, 1, 0.9) 0px 3px 8px;
+    min-width: 380px;
+    min-height: 300px;
+    margin: 0px 0px 20px 0px;
+  }
+
+  #upper-button {
+    max-width: 400px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 20px 20px 20px;
+  }
+
+  .buttons {
+    width: 160px;
+    font-size: mediuum;
+  }
 }
