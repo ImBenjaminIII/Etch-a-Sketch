@@ -28,7 +28,6 @@ body {
   box-shadow: rgb(0, 0, 1, 0.9) 0px 3px 8px;
   min-width: 600px;
   min-height: 450px;
-  margin: 0px 0px 20px 0px;
 }
 
 #container {
@@ -46,7 +45,8 @@ body {
   padding: 0 20px 20px 20px;
 }
 
-.buttons {
+.buttons,
+.colorPicker {
   border-radius: 20px;
   width: 100px;
   flex-grow: 1;
@@ -69,9 +69,18 @@ body {
 }
 
 .colorPicker {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   border: none;
-  width: 50px;
+  width: 25px;
   height: 50px;
+  background-color: transparent;
+}
+
+.colorPicker::-webkit-color-swatch {
+  border-radius: 50%;
+  border: 2px solid black;
 }
 
 .current-color {
@@ -91,9 +100,14 @@ body {
   user-select: none;
 }
 
+.grid-elements {
+  background-color: white;
+}
 .buttons:hover {
   border-radius: 20px;
-  background-color: gainsboro;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.1),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  transform: scale(1.05);
 }
 
 .para {
@@ -102,19 +116,25 @@ body {
   font-size: large;
 }
 
-@media (max-width: 500px) {
+.board-container {
+  padding: 20px;
+  background-color: rebeccapurple;
+}
+/* Media Queries */
+@media (max-width: 550px) {
   .title {
     font-size: xx-large;
   }
+
   #board {
     box-shadow: rgb(0, 0, 1, 0.9) 0px 3px 8px;
-    min-width: 380px;
+    min-width: 200px;
     min-height: 300px;
-    margin: 0px 0px 20px 0px;
+    background-color: white;
   }
 
   #upper-button {
-    max-width: 400px;
+    max-width: 350px;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
@@ -122,7 +142,15 @@ body {
   }
 
   .buttons {
-    width: 160px;
+    width: 120px;
     font-size: mediuum;
+  }
+
+  .colorPicker {
+    width: 40px;
+  }
+
+  .board-container {
+    width: 350px;
   }
 }
