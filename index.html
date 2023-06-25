@@ -4,33 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="TabIcon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap"
+      rel="stylesheet"
+    />
     <script src="script.js" defer></script>
-    <title>Etch-a-Sketch</title>
+    <title>Pixel Sketch</title>
   </head>
   <body>
     <div>
-      <h1 class="title">Etch-a-Sketch✏️</h1>
-      <p class="para">Enjoy Sketching🤗</p>
+      <h1 class="title" style="margin-bottom:  20px;">Pixel Sketch</h1>
     </div>
     <div class="board-container">
       <div id="board"></div>
-    </div>
-    <main>
       <div id="slider-container">
         <input class="slider" type="range" value="16" min="1" max="60" />
-        <p>Range : <span class="input">16 x 16</span> </p>
+        <p class="range">Range : <span class="input">16 x 16</span> </p>
       </div>
+    </div>
+    <main>
       <div id="upper-button">
-        <button class="buttons color">Color Mode🎨</button>
-        <button class="buttons eraser">Eraser Mode🪥</button>
-        <button class="buttons clear">Clear Mode🧹</button>
-        <button class="buttons rgb">RGB Mode🌈</button>
         <input class="colorPicker" type="color" value="#333333" />
+        <button class="buttons color">Color Mode </button>
+        <button class="buttons eraser">Eraser Mode </button>
+        <button class="buttons clear">Clear Mode </button>
+        <button class="buttons rgb">RGB Mode </button>
       </div>
     </main>
-
     <footer>
-      <h3>Copyright ©thIIIrdy 2023</h3>
+      <h3 class="footer-title">Copyright ©thIIIrdy 2023</h3>
     </footer>
     <div id="modal-color-picker">
       <div></div>
