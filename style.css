@@ -17,17 +17,20 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: floralwhite;
+  background-color: azure;
 }
 
 .title {
-  font-size: 50px;
+  font-family: 'Bagel Fat One', cursive;
+  color: rebeccapurple;
+  text-shadow: rgba(0, 0, 0, 0.9) 0px 2px 2px;
+  font-size: 70px;
 }
 
 #board {
   box-shadow: rgb(0, 0, 1, 0.9) 0px 3px 8px;
-  min-width: 600px;
-  min-height: 450px;
+  min-width: 800px;
+  min-height: 600px;
 }
 
 #container {
@@ -36,7 +39,7 @@ body {
 }
 
 #upper-button {
-  width: 600px;
+  width: 800px;
   text-align: center;
   display: flex;
   align-items: center;
@@ -48,19 +51,21 @@ body {
 .buttons,
 .colorPicker {
   border-radius: 20px;
-  width: 100px;
+  width: 150px;
+  height: 50px;
   flex-grow: 1;
-  height: 40px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: large;
+  text-align: center;
 }
 
 .slider {
-  margin: 20px;
+  margin: 10px;
 }
 
 #slider-container {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 }
 
@@ -92,7 +97,8 @@ body {
 }
 
 .active {
-  background-color: mediumslateblue;
+  background-color: rebeccapurple;
+  color: gainsboro;
 }
 
 .buttons,
@@ -117,13 +123,39 @@ body {
 }
 
 .board-container {
-  padding: 20px;
+  padding: 30px 30px 0px 30px;
+  border-radius: 20px;
   background-color: rebeccapurple;
+  margin-bottom: 50px;
 }
+
+.range {
+  color: white;
+}
+
+.footer-title {
+  font-size: 20px;
+}
+
+.icons {
+  height: 20px;
+}
+
 /* Media Queries */
+
+/* laptop */
+@media (max-width: 1800px) {
+  #board {
+    min-width: 650px;
+    min-height: 450px;
+  }
+}
+
+/* mobile */
 @media (max-width: 550px) {
   .title {
-    font-size: xx-large;
+    font-size: 50px;
+    font-family: 'Bagel Fat One', cursive;
   }
 
   #board {
@@ -143,7 +175,7 @@ body {
 
   .buttons {
     width: 120px;
-    font-size: mediuum;
+    font-size: medium;
   }
 
   .colorPicker {
@@ -151,6 +183,7 @@ body {
   }
 
   .board-container {
-    width: 350px;
+    width: 370px;
+    padding: 15px 15px 0px 15px;
   }
 }
