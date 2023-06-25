@@ -143,14 +143,6 @@ body {
 
 /* Media Queries */
 
-/* laptop */
-@media (max-width: 1800px) {
-  #board {
-    min-width: 650px;
-    min-height: 450px;
-  }
-}
-
 /* mobile */
 @media (max-width: 550px) {
   .title {
